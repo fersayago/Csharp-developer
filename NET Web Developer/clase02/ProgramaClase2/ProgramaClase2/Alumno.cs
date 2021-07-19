@@ -27,7 +27,7 @@ namespace ProgramaClase2
         // los atributos publicos no necesitan getters ni setters
 
         // para hacer mas sencillos los getters y setters
-        public string nombre { get; set; }
+        public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Documento { get; set; }
         public int Legajo { get; set; }
@@ -37,6 +37,31 @@ namespace ProgramaClase2
         public string Telefono { get; set; }
         public string Mail { get; set; }
         public bool CuotaAlDia { get; set; }
+
+        // hacemos el constructor con la cantidad de objetos minimos para que tenga sentido
+
+        // CONSTRUCTOR
+        public Alumno(string nombre, string apellido, string documento)
+        {
+            Nombre = nombre;
+            Apellido = apellido;
+            Documento = documento;
+        }
+
+        // METODOS
+        /* Caracteristicas de un metodo:
+         * Visibilidad
+         * Dato que devuelve
+         * Nombre
+         * Parametro que recibe <- opcional
+         */
+
+        public string MostrarDatos()
+        {
+            string valorADevolver = Nombre + " " + Apellido + " " + Documento;
+            return valorADevolver;
+        }
+
 
     }
 }
