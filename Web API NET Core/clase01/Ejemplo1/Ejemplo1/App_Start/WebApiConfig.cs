@@ -11,7 +11,7 @@ namespace Ejemplo1
         {
             // Configuración y servicios de API web
             // removemos el XML de los formatos para que devuelva JSON
-            config.Formatters.Remove(GlobalConfiguration.Configuration.Formatters.XmlFormatter)
+            config.Formatters.Remove(GlobalConfiguration.Configuration.Formatters.XmlFormatter);
             // Rutas de API web
             config.MapHttpAttributeRoutes();
 
