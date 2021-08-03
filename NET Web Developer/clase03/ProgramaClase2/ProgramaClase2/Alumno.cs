@@ -49,10 +49,10 @@ namespace ProgramaClase2
         }
 
         // SEGUNDO CONSTRUCTOR (overwritten)
-        public Alumno (string nombre, string apellido, string documento,
+        public Alumno(string nombre, string apellido, string documento,
             int legajo, DateTime fechaNacimiento, decimal cuota,
             string telefono, string mail)
-	    {
+        {
             // "this.Nombre = nombre;" === "Nombre = nombre;"
             this.Nombre = nombre;
             this.Apellido = apellido;
@@ -66,7 +66,7 @@ namespace ProgramaClase2
             this.FechaAlta = DateTime.Now;
             // damos por sentado que al crear el usuario tiene cuota al dia
             this.CuotaAlDia = true;
-	    }
+        }
 
         /* METODOS
          * 
@@ -97,11 +97,29 @@ namespace ProgramaClase2
         }
 
 
-        public void AumentarCuota()
+        public void AumentarCuota(decimal aumento)
         {
-
+            this.Cuota += aumento;
         }
 
+        public bool validarEdad(int edad)
+        {
+            // obtengo fecha de hoy
+            DateTime fechaHoy = DateTime.Now;
 
+            //restar el año de la fecha de hoy - el año de la fecha de nac
+            int aniosEntreFechas = fechaHoy.Year - FechaNacimiento.Year;
+            bool respuesta = false;
+            if (edad == aniosEntreFechas)
+            {
+                respuesta = true;
+            }
+            else
+            {
+                respuesta = false;
+            }
+
+            return respuesta;
+        }
     }
 }
