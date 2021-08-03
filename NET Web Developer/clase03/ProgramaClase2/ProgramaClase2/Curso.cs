@@ -31,5 +31,17 @@ namespace ProgramaClase2
             AlumnosDelCurso = new List<Alumno>();
         }
 
+
+        public string MostrarCurso()
+        {
+            string datosMostrar = $"Datos del curso: {Environment.NewLine}" +
+                $"{Nombre} {Duracion} {Dia}";
+
+            //agregamos los datos del profesor
+            datosMostrar += $"\nDatos del profesor: {Environment.NewLine}" +
+                $"{ProfesorDelCurso.MostrarDatos()}";
+            return datosMostrar;
+        }
+
     }
 }

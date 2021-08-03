@@ -20,7 +20,7 @@ namespace ProgramaClase2
             // agregamos un elemento luego de construir el objeto
             objetoAlumno1.Mail = "jmorales@gmail.com";
             objetoAlumno1.Telefono = "42913738";
-            objetoAlumno1.FechaNacimiento = new DateTime(1980,9,25);
+            objetoAlumno1.FechaNacimiento = new DateTime(1980, 9, 25);
             objetoAlumno1.Cuota = 1500.50m;
             objetoAlumno1.CuotaAlDia = true;
             objetoAlumno1.FechaAlta = DateTime.Now;
@@ -73,12 +73,27 @@ namespace ProgramaClase2
             Profesor objetoProfesor1 = new Profesor("Lautaro", "Hernandez", "45698125");
             objetoProfesor1.Sueldo = 1500m;
 
+
             // INSTANCIAR CURSO
             Curso objetoCursoProgramacion = new Curso("Programacion con C#", "13 clases",
                 24, "Martes y Jueves", "19 a 22", new DateTime(2020, 09, 10));
 
             Console.WriteLine("El nombre y dia de cursada del curso son:\n" +
                 objetoCursoProgramacion.Nombre + " " + objetoCursoProgramacion.Dia);
+
+            // declaro variable y se la asigno al objeto
+            int cupoCursoProgramacion = 15;
+            objetoCursoProgramacion.Cupos = cupoCursoProgramacion;
+
+            // de la misma manera podemos asignar el profesor al curso
+            objetoCursoProgramacion.ProfesorDelCurso = objetoProfesor1;
+
+            Console.WriteLine("El nombre del profesor asignado al curso es: " +
+                objetoCursoProgramacion.ProfesorDelCurso.Nombre + " " +
+                objetoCursoProgramacion.ProfesorDelCurso.Apellido);
+
+            Console.WriteLine("----------DATOS MOSTRADOS POR METODO EN CURSO----------");
+            Console.WriteLine(objetoCursoProgramacion.MostrarCurso()); ;
 
             Console.ReadKey();
                         
