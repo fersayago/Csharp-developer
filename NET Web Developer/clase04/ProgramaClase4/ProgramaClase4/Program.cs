@@ -28,13 +28,19 @@ namespace ProgramaClase4
             listMarcas.Add("Ford");
             listMarcas.Add("Mazda");
 
+            //for y foreach
+
             for (int i = 0; i < listMarcas.Count; i++)
             {
                 string marca = listMarcas[i];
                 Console.WriteLine(marca);
             }
 
-            // ! retomar 44:00
+            Console.WriteLine("La marca con foreach es:");
+            foreach (var item in listMarcas)
+            {
+                Console.WriteLine(item);
+            }
 
             List<int> listNumeros = new List<int>();
 
@@ -44,15 +50,20 @@ namespace ProgramaClase4
             listNumeros.Add(12);
             listNumeros.Add(9);
             //para agregar en una posicion exacta
-            listNumeros.Insert(int 0, int 3);
+            listNumeros.Insert(0, 3);
 
             // sorting de listas
             listNumeros.Sort();
 
             Console.WriteLine("Los numeros en la lista luego de ordenarlos son: ");
-            for (int i = 0; i < listNumeros.Count; i++)
+            //for (int i = 0; i < listNumeros.Count; i++)
+            //{
+            //    Console.WriteLine(listNumeros[i]);
+            //}
+            foreach (var item in listNumeros)
             {
-                Console.WriteLine(listNumeros[i]);
+                int nro = item;
+                Console.WriteLine("El nro por foreach es: " + nro);
             }
         }
     }
