@@ -65,6 +65,12 @@ namespace ProgramaClase4
                 int nro = item;
                 Console.WriteLine("El nro por foreach es: " + nro);
             }
+
+            Console.WriteLine("----------------------------------------------");
+
+            Auto objetoAuto = new Auto();
+
+            // ! RETOMAR 56:52
         }
     }
 }
